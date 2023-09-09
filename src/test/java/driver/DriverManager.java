@@ -15,14 +15,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverManager {
 	
-
-	
 	private static final Logger LOGGER=LogManager.getLogger(DriverManager.class);
 
 	public static WebDriver driver=null;
-	
-	
-
 	public static void launchBrowser() {
 		// TODO Auto-generated method stub
 		
@@ -76,6 +71,11 @@ public class DriverManager {
 
 	public static WebDriver getDriver() {
 		return driver;
+	}
+
+	public static void openPage(String url) {
+		driver.get(url);
+		
 	}
 	
 	
