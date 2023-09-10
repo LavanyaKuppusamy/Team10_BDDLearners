@@ -13,8 +13,8 @@ package test_Runner;
 					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 					
 					
-			features="src/test/resources/features",
-			glue="StepdefinitionHomepage",
+			features="src/test/resources/feature",
+			glue="step_Definitions",
 			dryRun=false,
 			monochrome=true,
 			publish=true

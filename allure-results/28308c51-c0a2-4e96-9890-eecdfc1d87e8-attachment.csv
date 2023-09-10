@@ -1,0 +1,7 @@
+data	output
+Login_validcrediential	Login successfully
+Login_InvalidCrediential	Login Unsuccessfully
+Login_onlyuser	Error message
+Login_onlypswd	Error message
+Login_blank	Error message
+Login_blankpswd	Error message
