@@ -1,0 +1,1 @@
+{"uuid":"bb3e7288-54d4-4be6-83be-64cb5ab60220","name":"Scenario Outline: Validate email sent for forgot password with invalid email id","children":["edc31f0f-d2e1-4512-bb82-3785ed6286ed"],"befores":[],"afters":[],"start":1694273250832,"stop":1694273250843}
