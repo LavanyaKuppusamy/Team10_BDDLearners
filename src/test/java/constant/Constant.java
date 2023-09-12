@@ -10,9 +10,10 @@ public class Constant {
 	public static String BROWSER;
 	public static String HomepageUrl;
 	public static String loginpageurl;
+	public static String dashboardurl;
+	public static String Forgotusername;
+	public static String Resetpassword;
 	
-	public static String UserName;
-	public static String Password;
 	
 	//public DashboardPage dashboard;
 	//public UserMainPage usermainpage;

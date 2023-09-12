@@ -20,6 +20,14 @@ public  void loadProperties() {
 		Constant.HomepageUrl= properties.getProperty("HomepageUrl");
 		Constant.BROWSER=properties.getProperty("BROWSER");
 		Constant.loginpageurl=properties.getProperty("loginpageurl");
-	}
+		Constant.dashboardurl=properties.getProperty("dashboardurl");
+		Constant.Forgotusername=properties.getProperty("Forgotusername");
+		Constant.Resetpassword=properties.getProperty("Resetpassword");
+		
+
+
+}
+
+
 
 }
