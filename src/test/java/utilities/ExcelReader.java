@@ -17,20 +17,16 @@ public class ExcelReader {
 	// Create a Array to save data
 	ArrayList<String> arrData = new ArrayList<String>();
 
-<<<<<<< Updated upstream
+
 	
 	String DDexcelSheet = ".//Data Files/userDetails.xlsx";
 
-	// Java method to read file
-	public ArrayList<String> dataDriven(String sheetName, String testCaseName) throws IOException {
-		FileInputStream fis = new FileInputStream(DDexcelSheet);
-=======
-	String DDexcelSheet = ".//Data Files/userDetails.xlsx";
+	
 
 	// Java method to read file
-	public ArrayList<String> dataDriven(String sheetName, String testCaseName) throws IOException {
+	public ArrayList<String> dataDrivenMethod(String sheetName, String testCaseName) throws IOException {
 		FileInputStream fis = new FileInputStream(DDexcelSheet);
->>>>>>> Stashed changes
+
 
 		// Create a Excel Workbook
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);

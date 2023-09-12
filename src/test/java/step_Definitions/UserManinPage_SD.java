@@ -9,20 +9,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import constant.Constant;
-import driver.DriverManager;
+import driver.Driver_Factory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import page_Objects.UserAddEditPage;
-import page_Objects.UserMainPage;
+import page_Objects.UserAddedit;
+import page_Objects.UserManagePage;
 import utilities.Loggerload;
 
 public class UserManinPage_SD extends Constant {
 
-	WebDriver driver = DriverManager.getDriver();
+	WebDriver driver = Driver_Factory.getDriver();
 	// DashboardPage dashboard = new DashboardPage(driver);
-	UserMainPage usermainpage = new UserMainPage(driver);
-	UserAddEditPage userAddedit = new UserAddEditPage(driver);
+	UserManagePage usermainpage = new UserManagePage(driver);
+	UserAddedit userAddedit = new UserAddedit(driver);
 	String URL = driver.getCurrentUrl();
 	String[] fields = { "First name", "Middle name", "Last name", "Location", "Phone no", "Linkedin Url", "User Role",
 			"Role Status", "Visa Status", "Email address", "Under Graduate", "Post Graduate", "Time Zone",
@@ -31,12 +31,12 @@ public class UserManinPage_SD extends Constant {
 	@Given("user Logged on the LMS portal")
 	public void user_logged_on_the_lms_portal() {
 		// LoginPage = new LoginPage(driver);
-		DriverManager.openPage("https://LMSportalapp.herokuapp.com/login");
+		Driver_Factory.openPage("https://LMSportalapp.herokuapp.com/login");
 	}
 
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_login() {
-		DriverManager.openPage("https://LMSportalapp.herokuapp.com/dashboard");
+		Driver_Factory.openPage("https://LMSportalapp.herokuapp.com/dashboard");
 		Loggerload.info("Admin is on dashboard page");
 	}
 
@@ -330,7 +330,7 @@ public class UserManinPage_SD extends Constant {
 	// @user_24 Delete user
 	@When("Admin click yes option")
 	public void admin_click_yes_option() {
-		usermainpage.getAlertPopUp(driver);
+		usermainpage.getAlertPopUp(driver,"Yes");
 	}
 
 	@Then("User deleted alert pops and user is no more available in data table")
@@ -341,7 +341,7 @@ public class UserManinPage_SD extends Constant {
 	// @user_25 Delete user
 	@When("Admin click No option")
 	public void admin_click_no_option() {
-		usermainpage.getAlertPopUp(driver);
+		usermainpage.getAlertPopUp(driver,"No");
 		Loggerload.info("Admin click No option from delete alert");
 	}
 

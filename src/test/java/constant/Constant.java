@@ -23,7 +23,7 @@ public class Constant {
 			public static ArrayList<String> excelDataValue(String sheetName, String testCase) throws IOException {
 				Loggerload.info("excelDataValue method");
 				ExcelReader ed = new ExcelReader();
-				ArrayList<String> data =  ed.dataDriven(sheetName, testCase);
+				ArrayList<String> data =  ed.dataDrivenMethod(sheetName, testCase);
 				return data;
 			}
 
