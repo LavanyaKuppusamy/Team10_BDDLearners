@@ -12,18 +12,18 @@ import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Excelreader {
+public class ExcelReader {
 
 	// Create a Array to save data
 	ArrayList<String> arrData = new ArrayList<String>();
 
 <<<<<<< Updated upstream
 	
-	String excelSheet = ".//Data Files/userDetails.xlsx";
+	String DDexcelSheet = ".//Data Files/userDetails.xlsx";
 
 	// Java method to read file
 	public ArrayList<String> dataDriven(String sheetName, String testCaseName) throws IOException {
-		FileInputStream fis = new FileInputStream(excelSheet);
+		FileInputStream fis = new FileInputStream(DDexcelSheet);
 =======
 	String DDexcelSheet = ".//Data Files/userDetails.xlsx";
 

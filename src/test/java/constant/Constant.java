@@ -3,7 +3,7 @@ package constant;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import utilities.ExcelReader;
+import utilities.Excelreader;
 import utilities.Loggerload;
 
 public class Constant {
@@ -22,7 +22,7 @@ public class Constant {
 	// Extract the data from Excel and return the value as String
 			public static ArrayList<String> excelDataValue(String sheetName, String testCase) throws IOException {
 				Loggerload.info("excelDataValue method");
-				ExcelReader ed = new ExcelReader();
+				Excelreader ed = new Excelreader();
 				ArrayList<String> data =  ed.dataDriven(sheetName, testCase);
 				return data;
 			}

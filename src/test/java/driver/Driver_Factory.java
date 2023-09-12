@@ -31,19 +31,11 @@ public class Driver_Factory {
 			e.printStackTrace();
 		}
 		Properties property = new Properties();
-		/*
-		 * try { property.load(reader); } catch (IOException e) { // TODO Auto-generated
-		 * catch block e.printStackTrace(); }
-		 */
+		
 		mybrowser = property.getProperty("browser");
 
 		if (mybrowser.equalsIgnoreCase("chrome")) {
-			// System.setProperty("webdriver.chrome.driver",
-			// ".\\src\\test\\resources\\driver\\chromedriver.exe");
-			// DesiredCapabilities dc3 = new DesiredCapabilities();
-			// dc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,
-			// UnexpectedAlertBehaviour.IGNORE);
-
+		
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		} else if (mybrowser.equalsIgnoreCase("firefox")) {
