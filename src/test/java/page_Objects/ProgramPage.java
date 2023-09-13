@@ -1,5 +1,6 @@
 package page_Objects;
 
+
 import java.util.List;
 import java.util.Random;
 
@@ -216,16 +217,97 @@ public ProgramPage(WebDriver wdriver) {
 			return PageGridDetail.size();
 		}
 		
-		//Search Program
+		//Footer Element
+		
+		@FindBy(xpath = "//p-paginator//div/span") WebElement lblPaginationEntries;
+		@FindBy(xpath = "//p-paginator//span/button[1]") WebElement btnFirstpage;
+		@FindBy(xpath = "//p-paginator//span/button[2]") WebElement btnSecondpage;
+		@FindBy(xpath = "//p-paginator//div/button[2]") WebElement btnPreviouspage;
+		@FindBy(xpath = "//p-paginator//div/button[3]") WebElement btnNextpage;
+		@FindBy(xpath = "//p-paginator//div/button[4]") WebElement btnLastspage;
+		@FindBy(xpath = "//p-table/div/div[2]/div") WebElement lblToalCount;
+		
+		@FindBys({
+				@FindBy(xpath = "//p-paginator/div/button") 
+		})List<WebElement> btnPagination;
+		
+		
+		public String GetPaginationShowEntries() {
+			return lblPaginationEntries.getText();
+		}
+		
+		public String getFooterTotalRecord() {
+			return lblToalCount.getText();
+		}
+				
+		public boolean IsFirstpageLoaded() {
+			action.moveToElement(btnFirstpage).click().build().perform();
+			return btnFirstpage.isEnabled();
+		}
+		public boolean IsFirstpageButtonEnabled() {
+			return btnFirstpage.isEnabled();
+		}
+		public boolean IsSecondpageLoaded() {
+			return btnSecondpage.isEnabled();
+		}
+		
+		public boolean IsSecondPageButtonEnabled() {
+			return btnSecondpage.isEnabled();
+		}
+		
+		public void ClickFirstsNavigationButton() {
+			action.moveToElement(btnFirstpage).click().build().perform();
+		}
+		
+		public void ClickPreviousNavigationButton() {
+			action.moveToElement(btnPreviouspage).click().build().perform();
+		}
+		public boolean IsPreviouNavigationDisabled() {
+			return btnPreviouspage.isEnabled();
+		}
+		
+		public boolean IsNextNavigationDisabled() {
+			return btnNextpage.isEnabled();
+		}
+		public void ClickNextNavigationButton() {
+			action.moveToElement(btnNextpage).click().build().perform();
+		}
+
+		public void ClickLastNavigationButton() {
+			action.moveToElement(btnLastspage).click().build().perform();
+		}
+		
 		@FindBy(xpath = "//mat-card-title/div[2]/div[2]//input") WebElement txtSearch;
+		@FindBy(id="new") WebElement btnAddnew;
+		@FindBy(xpath="//button[@id='new']/span[2]") WebElement lblAddnew;
+
+		
+		public String GetAddButtonText() {
+			return lblAddnew.getText();
+		}
+	
 		
 		public void EnterSearchContent(String content) {
 			txtSearch.clear();
 			txtSearch.sendKeys(content);
 		}
 		
+		public void ClickNewButton() {
+			action.moveToElement(lblAddnew).click().build().perform();
+		}
+			
+		public boolean IsAddButtonDisplayed() {
+			return btnAddnew.isDisplayed();
+		}
+		public boolean IsSearchBoxDisplayed() {
+			return txtSearch.isDisplayed();
+		}
 		
-	
+		public boolean IsMultiDeleteIconEnabled() {
+			return iconMultipleDelete.isEnabled();
+		}
+		
+		
 	
 }
 
