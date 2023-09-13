@@ -1,0 +1,1 @@
+{"uuid":"ad9cadd3-0a44-4cf8-834d-f200d6b961c0","name":"Scenario Outline: Validate admin able to add new assignment with invalid data in mandatory fields","children":["a02dcfe0-832c-4e71-9f2e-1ebea676af34"],"befores":[],"afters":[],"start":1694634408974,"stop":1694634408990}

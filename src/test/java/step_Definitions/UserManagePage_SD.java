@@ -173,7 +173,7 @@ public class UserManagePage_SD extends Constant {
 		getUserDetails(SheetName, Testcase);
 	}
 
-	public void getUserDetails(String SheetName, String TestCaseName) throws IOException {
+	private void getUserDetails(String SheetName, String TestCaseName) throws IOException {
 
 		ArrayList<String> userData = excelDataValue(SheetName, TestCaseName);
 
@@ -265,7 +265,7 @@ public class UserManagePage_SD extends Constant {
 	// @user_18 Edit user
 	@Given("The edit icon on row level in data table is enabled")
 	public void the_edit_icon_on_row_level_in_data_table_is_enabled() {
-		Loggerload.info("user is trying to Edit details of a userz");
+		Loggerload.info("user is trying to Edit details of a user");
 	}
 
 	@When("Admin clicks the edit icon")
