@@ -17,7 +17,7 @@ public class UserManinPage_SD {
 
 	WebDriver driver = DriverManager.getDriver();
 	// DashboardPage dashboard = new DashboardPage(driver);;
-	UserMainPage usermainpage = new UserMainPage(driver);;
+    UserMainPage usermainpage = new UserMainPage(driver);;
 	String URL = driver.getCurrentUrl();
 
 	@Given("user Logged on the LMS portal")
