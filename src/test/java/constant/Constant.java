@@ -1,9 +1,5 @@
 package constant;
 
-import page_Objects.UserMainPage;
-
-import org.openqa.selenium.By;
-
 public class Constant {
 	
 	
