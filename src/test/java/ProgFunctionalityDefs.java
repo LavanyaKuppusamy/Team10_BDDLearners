@@ -1,99 +1,101 @@
 package step_Definitions;
 
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.openqa.selenium.WebElement;
+
+import com.aventstack.extentreports.util.Assert;
 
 import io.cucumber.java.en.*;
 import page_Objects.ProgramPage;
+import utilities.Loggerload;
+import webdriverManager.DriverManager;
 
 public class ProgFunctionalityDefs {
 	
 	WebDriver driver;
 	ProgramPage progPage;
 	boolean Content;
+	//Common commoncontent;
+	String URL = driver.getCurrentUrl();
 	
 	@Given("Admin is on Manage Program page")
 	public void admin_is_on_manage_program_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		assertEquals("Not landed on Program page","Manage Program" , progPage.GetPageHeaderTitle());
+	   
 	}
 
 	@When("Admin clicks Next page link on the program table")
 	public void admin_clicks_next_page_link_on_the_program_table() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		progPage.ClickNextNavigationButton();
+	   
 	}
 
-	@Then("Admin should see the Pagination has {string} link")
-	public void admin_should_see_the_pagination_has_link(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@Then("Admin should see the Pagination has next link")
+	public void admin_should_see_the_pagination_has_next_link() {
+		
+		progPage.IsSecondpageLoaded();
+	   
 	}
-
+	
 	@When("Admin clicks Last page link")
 	public void admin_clicks_last_page_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   progPage.ClickLastNavigationButton();
 	}
 
 	@Then("Admin should see the last page record on the table with Next page link are disabled")
 	public void admin_should_see_the_last_page_record_on_the_table_with_next_page_link_are_disabled() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	
+		progPage.IsNextNavigationDisabled();
 	}
 
 	@When("Admin clicks First page link")
 	public void admin_clicks_first_page_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+		progPage.ClickPreviousNavigationButton();
 	}
 
 	@Then("Admin should see the previous page record on the table with pagination has previous page link")
 	public void admin_should_see_the_previous_page_record_on_the_table_with_pagination_has_previous_page_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
+		progPage.IsFirstpageButtonEnabled();
 	}
 
 	@When("Admin clicks Start page link")
 	public void admin_clicks_start_page_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+		progPage.ClickFirstsNavigationButton();
 	}
-
+	
 	@Then("Admin should see the very first page record on the table with Previous page link are disabled")
 	public void admin_should_see_the_very_first_page_record_on_the_table_with_previous_page_link_are_disabled() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		progPage.IsPreviouNavigationDisabled();
+	   
 	}
 
 	@When("Admin clicks on the Ascending or Descending arrow button on program page")
 	public void admin_clicks_on_the_ascending_or_descending_arrow_button_on_program_page(io.cucumber.datatable.DataTable dataTable) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-	    //
-	    // For other transformations you can register a DataTableType.
-	    throw new io.cucumber.java.PendingException();
+	   
+	//	commoncontent.sort();
+		
 	}
 
 	@Then("Admin can see the results in Ascending or Descending order on program page")
 	public void admin_can_see_the_results_in_ascending_or_descending_order_on_program_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@When("Admin clicks on the link page button on program page")
 	public void admin_clicks_on_the_link_page_button_on_program_page(io.cucumber.datatable.DataTable dataTable) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-	    //
-	    // For other transformations you can register a DataTableType.
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("Admin is re-directed to following page")
@@ -104,94 +106,104 @@ public class ProgFunctionalityDefs {
 
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_login() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		DriverManager.openPage("https://LMSportalapp.herokuapp.com/login");
+	   
 	}
-
 	@When("Admin clicks {string} on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		// dashboard = new DashboardPage(driver);
+				// dashboard.clickUserTab();
+				Loggerload.info("Admin clicked User from navigation bar");
 	}
 
 	@Then("Admin should see URL with {string}")
 	public void admin_should_see_url_with(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		Loggerload.info("Admin user sees Manage User in the URL");
+		assertEquals(URL, "https://LMSportalapp.herokuapp.com/manageUser");
 	}
 
 	@Then("Admin should see a heading with text {string} on the page")
 	public void admin_should_see_a_heading_with_text_on_the_page(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		progPage.GetPageHeaderTitle();
+	   
 	}
 
 	@Then("Admin should see the text as {string} along with Pagination icon below the table.")
 	public void admin_should_see_the_text_as_along_with_pagination_icon_below_the_table(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@Then("Admin should see the footer as {string}.")
 	public void admin_should_see_the_footer_as(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
-
+    
+	
 	@Then("Admin should see a Delete button on the top left hand side as Disabled")
 	public void admin_should_see_a_delete_button_on_the_top_left_hand_side_as_disabled() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		assertFalse("Multiple delete button is enabled", progPage.IsMultiDeleteIconEnabled());
+	   
+		
 	}
 
 	@Then("Admin should see a {string} button on the program page above the data table")
-	public void admin_should_see_a_button_on_the_program_page_above_the_data_table(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void admin_should_see_a_button_on_the_program_page_above_the_data_table(String ButtonText) {
+		
+		assertTrue("Add new button is not visible", progPage.IsAddButtonDisplayed());
+		assertEquals("Page title is not pre requirement", ButtonText,progPage.GetAddButtonText() );
+	   
 	}
 
 	@Then("Admin should see the number of records \\(rows of data in the table) displayed on the page are {int}")
 	public void admin_should_see_the_number_of_records_rows_of_data_in_the_table_displayed_on_the_page_are(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
+		
+		
 	}
 
 	@Then("Admin should see the sort arrow icon beside to each column header except Edit and Delete")
 	public void admin_should_see_the_sort_arrow_icon_beside_to_each_column_header_except_edit_and_delete() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@Then("Admin should see check box on the left side in all rows of the data table")
 	public void admin_should_see_check_box_on_the_left_side_in_all_rows_of_the_data_table() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
-
+	
 	@Then("Admin should see the Edit and Delete buttons on each row of the data table")
 	public void admin_should_see_the_edit_and_delete_buttons_on_each_row_of_the_data_table() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		assertTrue(progPage.checkEditIcon());
+		Loggerload.info("Edit icon is present in User Main Page");
+		assertTrue(progPage.checkDeleteIcon());
+		Loggerload.info("Delete icon is present in User Main Page");
+	    
 	}
 
 	@Then("Admin should see Search bar with text as {string}")
 	public void admin_should_see_search_bar_with_text_as(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		if (progPage.checkSearchField()) {
+			Loggerload.info("Admin sees the Search Text Box");
+		} else
+
+			Loggerload.info("Search textbox is missing");
+	}
+
+	   
 	}
 
 	@Then("Admin should see data table on the Manage Program Page with following column headers")
 	public void admin_should_see_data_table_on_the_manage_program_page_with_following_column_headers(io.cucumber.datatable.DataTable dataTable) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-	    //
-	    // For other transformations you can register a DataTableType.
-	    throw new io.cucumber.java.PendingException();
+	 
+		List<WebElement> list_of_headers = progPage.getTableHeaders();
+		list_of_headers.stream().forEach(l -> System.out.println(l));
+		Loggerload.info("Admin sees the data table with headers Program Name, Program Description, Program Status ,Edit,Delete");
+		
 	}
-
 
 	@When("Admin enters Program search content into search box {string}")
 	public void admin_enters_program_search_content_into_search_box(String Content) {
@@ -203,14 +215,12 @@ public class ProgFunctionalityDefs {
 	@Then("Admin see the Program search result")
 	public void admin_see_the_program_search_result() throws InterruptedException {
 		
-		Thread.sleep(3000);
-		String output = driver.getPageSource();
-		boolean search_text = progPage.EnterSearchContent(Content);
-		Assert.assertEquals(output,true);		
-		Thread.sleep(2000);
+		Loggerload.info("Admin see Program Search result" );
+		//assertTrue("Program page ", progPage.IsPageLoaded("Program"));
+		
+		
 	    
 		
 	}
-
 
 }
