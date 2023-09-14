@@ -1,6 +1,4 @@
 package page_Objects;
-
-public class Attendanceaddedit {
 	import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.WebElement;
 	import org.openqa.selenium.support.FindBy;
@@ -10,7 +8,7 @@ public class Attendanceaddedit {
 
 	public class Attendanceaddedit {
 
-		public UserAddedit(WebDriver driver) {
+		public Attendanceaddedit(WebDriver driver) {
 			Loggerload.info("Entered into User Delete Page");
 			PageFactory.initElements(driver, this);
 		}
@@ -40,15 +38,15 @@ public class Attendanceaddedit {
 			submitButton.click();
 			
 		}
-ocatio
+
 		public void enterAttendanceDetails(String programname, String classname, String studentname, String Attendance, String phoneno,
 				String linkedurl, String undergraduate, String postgraduate, String timezone, String usercomments,
 				String userrole, String rolestatus, String visastatus) {
 			
-			fname.sendKeys(firstname);
-			mname.sendKeys(middlename);
-			lname.sendKeys(lastname);
-			place.sendKeys(location);
+			fname.sendKeys("firstname");
+			mname.sendKeys("middlename");
+			lname.sendKeys("lastname");
+			place.sendKeys("location");
 			phone.sendKeys(phoneno);
 			linkedUrl.sendKeys(linkedurl);
 			ug.sendKeys(undergraduate);
@@ -75,4 +73,4 @@ ocatio
 		}
 		
 	}
-}
+

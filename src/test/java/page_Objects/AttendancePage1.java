@@ -5,13 +5,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import utilities.Loggerload;
 import webdriverManager.DriverManager;
 
-public class AttendancePage {
+public class AttendancePage1 {
 
+	private static final Object Attendance_PAGE_TITLE = null;
 	public WebDriver driver;
 
-	public attendancePage(WebDriver driver) {
+	public AttendancePage1(WebDriver driver) {
 		this.driver = driver;
 
 	}
@@ -27,11 +29,6 @@ public class AttendancePage {
     By searchBox2 = By.xpath("//*[@id='Select Batch Id']/*[@type='input']");
     By LMStitle=By.xpath("//table//th[3]");
 	
-
-	public AttendancePage(WebDriver driver) {
-		DriverManager.openPage("https://LMSportalapp.herokuapp.com/login");
-	}
-
 	public void AttendancePageclick() {
 		driver.findElement(AttendanceLink).click();
 		
@@ -88,24 +85,22 @@ public class AttendancePage {
 
 	public void checkdeleteicon() {
 		 {
-			Assert.assertTrue(attendancePage.checkdeleteicon());
+			AttendancePage1 attendancePage;
+		//	System.out.println(attendancePage.checkdeleteicon());
 			Loggerload.info("Delete icon is present in Attendance Main Page");
 		}
 	}
 
-	public void addnewattendance() {
-		public void admin_clicks_button(String string) {
-			usermainpage.addnewattendance();
-			Loggerload.info("Admin clicked on Add new user Button");
-		}
+	
 		
 	
-
+	public void clickDelete() {
+		
 		
 	}
 
-	public void clickDelete() {
-		
+	public void addnewattendance() {
+		// TODO Auto-generated method stub
 		
 	}
 

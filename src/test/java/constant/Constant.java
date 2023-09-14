@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 public class Constant {
 	
 	
+	public static final String BatchPageURL = null;
 	public static String BROWSER;
 	public static String HomepageUrl;
 	public static String loginpageurl;

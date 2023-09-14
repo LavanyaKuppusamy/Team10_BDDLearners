@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import page_Objects.AttendancePage;
+import page_Objects.AttendancePage1;
 import utilities.CrossBrowser;
 import webdriverManager.DriverManager;
 
@@ -13,7 +13,7 @@ public class Attendance_SD {
 	
 	public WebDriver driver = CrossBrowser.getDriver();
 	Students_SD students = new Students_SD();
-	AttendancePage attendancepage = new AttendancePage(driver);
+	AttendancePage1 attendancepage = new AttendancePage1(driver);
 	
 	@Given("Admin is on dashboard page after Login page")
 	public void admin_is_on_dashboard_page_after_login_page() {

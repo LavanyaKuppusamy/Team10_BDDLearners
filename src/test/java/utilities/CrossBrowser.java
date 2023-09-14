@@ -1,5 +1,6 @@
 package utilities;
 
+import utilities.Loggerload;
 import java.time.Duration;
 
 import org.openqa.selenium.Capabilities;
@@ -21,9 +22,10 @@ public class CrossBrowser {
 	public static WebDriver driver;
 	
 	public WebDriver setupDriver (String browser) throws Throwable {
+		
 				
 		if(browser.equalsIgnoreCase("Chrome")) {
-			LoggerLoad.info("Testing in Chrome browser");
+			Loggerload.info("Testing in Chrome browser");
 			ChromeOptions ops = new ChromeOptions();
 			
 			WebDriverManager.chromedriver().setup();
@@ -38,7 +40,7 @@ public class CrossBrowser {
 		
 		else if(browser.equalsIgnoreCase("Firefox")) {
 			
-			LoggerLoad.info("Testing in Firefox browser");
+			Loggerload.info("Testing in Firefox browser");
 			
 			
 			WebDriverManager.firefoxdriver().setup();
@@ -54,7 +56,7 @@ public class CrossBrowser {
 		
 		else if(browser.equalsIgnoreCase("Edge")) {
 			
-			LoggerLoad.info("Testing in Edge browser");
+			Loggerload.info("Testing in Edge browser");
 			WebDriverManager.edgedriver().setup();
 			// this will make sure that alters does not close automatically 
 						//and allow us to handle alert in code.
