@@ -1,5 +1,5 @@
 @tag
-Feature: Manage Attendance Page verification
+Feature: Attendence Edit Page
 
 
  @tag43

@@ -1,7 +1,7 @@
 #Author: Hima
 
 @user
-Feature: userpage validation
+Feature: User_ManagePage
   
   Background:
    Given user Logged on the LMS portal

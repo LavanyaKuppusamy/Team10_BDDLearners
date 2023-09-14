@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Manage Class Page Verification feature
+Feature: Class Page Verification feature
   I want to use this template for my feature file
 
   @tag1

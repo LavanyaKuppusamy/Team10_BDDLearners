@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @Assignment
-Feature: Manage Assignment Page Verification
+Feature: Assignment Manage Page Verification
   I want to use this template for my feature file
 
   @tag1
@@ -48,7 +48,7 @@ Feature: Manage Assignment Page Verification
   Scenario Outline: Verify delete icon below the header
     Given Admin is on dashboard page after Login
     When  Admin clicks "assignment" button on the navigation bar
-    Then  Admin should see disabled delete icon below the "Manage assignment"
+    Then  Admin should see disabled delete icon below the "Manage assignment" ASSIGNMENT
     
      @tag6
   Scenario Outline: Verify search bar on the manage assignment page
@@ -85,7 +85,7 @@ Feature: Manage Assignment Page Verification
   Scenario Outline: Verify delete icon in the data table
     Given Admin is on dashboard page after Login
     When  Admin clicks "assignment" button on the navigation bar
-    Then  Delete Icon in each row of data table only  when entries are available
+    Then  Delete Icon in each row of data table only  when entries are available ASSIGNMENT
     
     @tag12
   Scenario Outline: Verify delete icon when no data in the table

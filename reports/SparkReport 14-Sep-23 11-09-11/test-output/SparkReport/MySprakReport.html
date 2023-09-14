@@ -1,0 +1,3572 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>ExtentReport</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">BDDLearners_Team10 Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sep 14, 2023 11:16:54 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@assignment_40</a><a class="dropdown-item" href="#">@tag1</a><a class="dropdown-item" href="#">@assignment_47</a><a class="dropdown-item" href="#">@tag14</a><a class="dropdown-item" href="#">@tag7</a><a class="dropdown-item" href="#">@assignment_36</a><a class="dropdown-item" href="#">@tag7_DeleteMultipleBatches</a><a class="dropdown-item" href="#">@assignment_41</a><a class="dropdown-item" href="#">@tag9</a><a class="dropdown-item" href="#">@tag11</a><a class="dropdown-item" href="#">@tag8</a><a class="dropdown-item" href="#">@assignment_35</a><a class="dropdown-item" href="#">@assignment_45</a><a class="dropdown-item" href="#">@assignment_39</a><a class="dropdown-item" href="#">@tag6_DeleteBatch</a><a class="dropdown-item" href="#">@assignment</a><a class="dropdown-item" href="#">@assignment_42</a><a class="dropdown-item" href="#">@assignment_46</a><a class="dropdown-item" href="#">@tag10_EditBatch</a><a class="dropdown-item" href="#">@assignment_48</a><a class="dropdown-item" href="#">@assignment_50</a><a class="dropdown-item" href="#">@tag</a><a class="dropdown-item" href="#">@assignment_51</a><a class="dropdown-item" href="#">@assignment_38</a><a class="dropdown-item" href="#">@tag2</a><a class="dropdown-item" href="#">@assignment_37</a><a class="dropdown-item" href="#">@assignment_43</a><a class="dropdown-item" href="#">@assignment_49</a><a class="dropdown-item" href="#">@tag3</a><a class="dropdown-item" href="#">@assignment_44</a><a class="dropdown-item" href="#">@tag13</a><a class="dropdown-item" href="#">@tag4</a><a class="dropdown-item" href="#">@assignment_52</a><a class="dropdown-item" href="#">@tag12</a><a class="dropdown-item" href="#">@tag5</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">AddDeleteEdit Batch validation</p>
+            <p class="text-sm">
+              <span>11:16:55 AM</span> / <span>00:00:00:472</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">AddDeleteEdit Batch validation</h5>
+<span class='badge badge-success'>09.14.2023 11:16:55 AM</span>
+<span class='badge badge-danger'>09.14.2023 11:16:55 AM</span>
+<span class='badge badge-default'>00:00:00:472</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Check if the fields exist in popup</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then The pop up should include the fields Name ,Description as text box, Program Name as drop down, Status as radio button ,Number of classes as text box</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log fail-bg mr-2">Fail</span>Check if description is optional field</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then User finds description field is optional</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log fail-bg mr-2">Fail</span>Check if the program details are added in data table</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="9"><span class="badge log fail-bg mr-2">Fail</span>Check if the program details are added in data table</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters batch details with "132","Selenium","BDDLearners-SDET10","Active","18" and click "<confirmation>"button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then User find a "Batch created"new batch created or not</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="13"><span class="badge log fail-bg mr-2">Fail</span>Check if the program details are added in data table</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters batch details with "135","API","BDDLearners-SDET12","Active","20" and click "<confirmation>"button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then User find a "Batch Not created"new batch created or not</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="17"><span class="badge log fail-bg mr-2">Fail</span>Check for eror mesrsages for invalid fields</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="18"><span class="badge log fail-bg mr-2">Fail</span>Check for eror mesrsages for invalid fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When any of the fields have invalid "@$@1","Selenium","BDDLearners-SDET","Active","1" and click "save" button values</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error "Name is invalid" should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="22"><span class="badge log fail-bg mr-2">Fail</span>Check for eror mesrsages for invalid fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When any of the fields have invalid "10","API","BDDLearners-SDET12","Active","*" and click "save" button values</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error "Number of classes is invalid" should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="26"><span class="badge log fail-bg mr-2">Fail</span>Check for error messages for mandatory fields</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="27"><span class="badge log fail-bg mr-2">Fail</span>Check for error messages for mandatory fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When any of the fields have invalid "","Selenium","BDDLearners-SDET15","Active","6" and click "save" button values</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error "Missing Mandatory field" should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="31"><span class="badge log fail-bg mr-2">Fail</span>Check for error messages for mandatory fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When any of the fields have invalid "10","API","","Active","15" and click "save" button values</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error "Missing Mandatory field" should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="35"><span class="badge log fail-bg mr-2">Fail</span>Check for error messages for mandatory fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When any of the fields have invalid "","Selenium","BDDLearners-SDET26","","10" and click "save" button values</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error "Missing Mandatory field" should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="39"><span class="badge log fail-bg mr-2">Fail</span>Check for error messages for mandatory fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given A new pop up with Batch details appears</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When any of the fields have invalid "10","API","BDDLearners-SDET28","Active","" and click "save" button values</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error "Missing Mandatory field" should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="43"><span class="badge log fail-bg mr-2">Fail</span>Validate row level delete icon</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given The delete icon on row level in data table is enabled</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks the delete icon</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Alert appears with yes and No option</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="47"><span class="badge log fail-bg mr-2">Fail</span>Validate accept alert</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin clicks the delete icon</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When You click yes option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Batch deleted alert pops and batch is no more available in data table</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="51"><span class="badge log fail-bg mr-2">Fail</span>Validate reject alert</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin clicks the delete icon_ADD</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When you click No option</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Batch is still listed in data table</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="55"><span class="badge log fail-bg mr-2">Fail</span>Validate the delete icon below the header</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given None of the checkboxes in data table are selected</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then The delete icon under the "Manage Batch" header should be disabled_ADD</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="58"><span class="badge log fail-bg mr-2">Fail</span>Check for single row delete</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given One of the checkboxes/row is selected</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Click delete icon below "Manage Batch" header</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then The respective row in the data table is deleted</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="62"><span class="badge log fail-bg mr-2">Fail</span>Check for multi row delete</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Two or more checkboxes/row is selected</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Click delete icon below "Manage Batch" header</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then The respective row in the data table is deleted_ADDBATCH</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="66"><span class="badge log fail-bg mr-2">Fail</span>Validate row level edit icon</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given The edit icon on row level in data table is enabled</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks the edit icon</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then A new pop up with Batch details appears</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="70"><span class="badge log fail-bg mr-2">Fail</span>The updated batch details should appear on the data table</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="71"><span class="badge log fail-bg mr-2">Fail</span>The updated batch details should appear on the data table</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin clicks the edit icon</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Update the fields with valid values "Batch" and "0"and click Save</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then The updated batch details should appear on the data table</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="75"><span class="badge log fail-bg mr-2">Fail</span>Check if the update throws error with invalid values</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="76"><span class="badge log fail-bg mr-2">Fail</span>Check if the update throws error with invalid values</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin clicks the edit icon</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Update the fields with invalid values "Batch" and "1" and click save</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error message should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="80"><span class="badge log fail-bg mr-2">Fail</span>Check if you get error message when mandatory fields are erased</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="81"><span class="badge log fail-bg mr-2">Fail</span>Check if you get error message when mandatory fields are erased</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin clicks the edit icon</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Erase data from mandatory field "Batch" and "2"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error message should appear</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="85"><span class="badge log fail-bg mr-2">Fail</span>Check if description field is optional in update</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="86"><span class="badge log fail-bg mr-2">Fail</span>Check if description field is optional in update</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin clicks the edit icon</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Erase data from description field "Batch" and "3"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then The updated batch details should appear on the data table</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="90"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add new assignment</p>
+            <p class="text-sm">
+              <span>11:16:55 AM</span> / <span>00:00:00:266</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add new assignment</h5>
+<span class='badge badge-success'>09.14.2023 11:16:55 AM</span>
+<span class='badge badge-danger'>09.14.2023 11:16:56 AM</span>
+<span class='badge badge-default'>00:00:00:266</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=90</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="91"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with valid data in mandatory fields</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="92"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with valid data in mandatory fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters all mandatory field values with valid data valid values from "Assignment" and "NewAssignment"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Admin should see new assignment details is added in the data table</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="97"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with invalid data in mandatory fields</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="98"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with invalid data in mandatory fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters all mandatory field values with invalid data from "Assignment" and "invalidValues"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error message should appear in alert</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="104"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with valid data  in all fields</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="105"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with valid data  in all fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters values in all fields with valid data from "Assignment" and "validAllFields"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Admin should see new assignment details is added in the data table</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="111"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with invalid data  in optional fields</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="112"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment with invalid data  in optional fields</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters with invalid data in optional fields from "Assignment" and "InvalidOptionalFields"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Error message should appear in alert</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="118"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing program name</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="119"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing program name</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters  data missing value in program name from "Assignment" and "MissingProgramName"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Program Name is missing</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="125"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Batch number</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="126"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Batch number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters  data missing value in Batch number from "Assignment" and "MissingBatchNumber"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Batch number is missing</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="132"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Assignment name</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="133"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Assignment name</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters  data missing value in Assignment name from "Assignment" and "MissingAssignmentName"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Assignment Name is missing</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="139"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Assignment Due date</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="140"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Assignment Due date</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters  data missing value in Assignment due date from "Assignment" and "MissingAssignmentDuedate"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Assignment due date is missing</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="146"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Grade by</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="147"><span class="badge log fail-bg mr-2">Fail</span>Validate admin able to add new assignment missing Grade by</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters  data missing value in Grade by from "Assignment" and "MissingGradeBy"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Grade by is missing</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="153"><span class="badge log fail-bg mr-2">Fail</span>Validate  admin able to add new assignment passing past date</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="154"><span class="badge log fail-bg mr-2">Fail</span>Validate  admin able to add new assignment passing past date</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin enters passed date in the due date field from "Assignment" and "PassedDate"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks save button</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Assignment cannot be created for the passed date</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="160"><span class="badge log fail-bg mr-2">Fail</span>Validate date picker</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks date from date picker</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then selected date should be their in class date text box ASSIGN</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="165"><span class="badge log fail-bg mr-2">Fail</span>validate date picker should be correct format</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks date from date picker</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then selected date should be in  mm/dd/yyyy format</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="170"><span class="badge log fail-bg mr-2">Fail</span>Validate right arrow in data picker to navigate to next month</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks right arrow in the date picker near month</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Next month calender should visible</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="175"><span class="badge log fail-bg mr-2">Fail</span>Validate left arrow in data picker to navigate to next month</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks left arrow in the date picker near month</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then previous month calender should visible_ASSIGNMENT</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="180"><span class="badge log fail-bg mr-2">Fail</span>Validate current date is highlighted in the date picker</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks date from date picker</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Admin should see current date is highlighted in the date picker</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="185"><span class="badge log fail-bg mr-2">Fail</span>Validate selected date is highlighted in the date picker</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks date picker button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And selects future date</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Admin should see current date is highlighted in the date picker</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="191"><span class="badge log fail-bg mr-2">Fail</span>Validate cancel button function in assignment details popup window</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When Admin clicks Cancel button without entering values in the fields</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Admin should land on manage assignment page</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="196"><span class="badge log fail-bg mr-2">Fail</span>Validate cancel button function in assignment details popup window with values in field</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="197"><span class="badge log fail-bg mr-2">Fail</span>Validate cancel button function in assignment details popup window with values in field</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given Admin click +Add new assignment button after reaching to manage assignment page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Given Admin is in  assignment details popup window</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When Admin clicks Cancel button entering values in the fields from "Assignment" and "validAllFields"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then Admin should land on manage assignment page</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And validate new assignment is not created in the data table</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">35</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_40</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_40</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='126'>Validate admin able to add new assignment missing Batch number</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Batch number</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag1</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag1</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Check if the fields exist in popup</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the fields exist in popup</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_47</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_47</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='170'>Validate right arrow in data picker to navigate to next month</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate right arrow in data picker to navigate to next month</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag14</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag14</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Check if description field is optional in update</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if description field is optional in update</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag7</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag7</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Validate accept alert</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate accept alert</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_36</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_36</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='98'>Validate admin able to add new assignment with invalid data in mandatory fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with invalid data in mandatory fields</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag7_DeleteMultipleBatches</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag7_DeleteMultipleBatches</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>Validate the delete icon below the header</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate the delete icon below the header</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_41</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_41</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='133'>Validate admin able to add new assignment missing Assignment name</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Assignment name</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@tag9</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag9</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='58'>Check for single row delete</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for single row delete</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>Check for multi row delete</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for multi row delete</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag11</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag11</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='71'>The updated batch details should appear on the data table</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.The updated batch details should appear on the data table</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag8</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag8</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='51'>Validate reject alert</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate reject alert</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_35</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_35</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='92'>Validate admin able to add new assignment with valid data in mandatory fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with valid data in mandatory fields</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_45</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_45</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='160'>Validate date picker</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate date picker</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_39</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_39</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='119'>Validate admin able to add new assignment missing program name</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing program name</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag6_DeleteBatch</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag6_DeleteBatch</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='43'>Validate row level delete icon</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate row level delete icon</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>18</span>
+</span>
+<p class="name">@assignment</p>
+<p class="duration text-sm">18 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment</h4>
+<span status="fail" class='badge log badge-danger'>18 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='92'>Validate admin able to add new assignment with valid data in mandatory fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with valid data in mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='98'>Validate admin able to add new assignment with invalid data in mandatory fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with invalid data in mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='105'>Validate admin able to add new assignment with valid data in all fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with valid data in all fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='112'>Validate admin able to add new assignment with invalid data in optional fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with invalid data in optional fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='119'>Validate admin able to add new assignment missing program name</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing program name</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='126'>Validate admin able to add new assignment missing Batch number</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Batch number</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='133'>Validate admin able to add new assignment missing Assignment name</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Assignment name</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='140'>Validate admin able to add new assignment missing Assignment Due date</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Assignment Due date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='147'>Validate admin able to add new assignment missing Grade by</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Grade by</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='154'>Validate admin able to add new assignment passing past date</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment passing past date</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='160'>Validate date picker</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate date picker</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='165'>validate date picker should be correct format</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.validate date picker should be correct format</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='170'>Validate right arrow in data picker to navigate to next month</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate right arrow in data picker to navigate to next month</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='175'>Validate left arrow in data picker to navigate to next month</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate left arrow in data picker to navigate to next month</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='180'>Validate current date is highlighted in the date picker</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate current date is highlighted in the date picker</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='185'>Validate selected date is highlighted in the date picker</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate selected date is highlighted in the date picker</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='191'>Validate cancel button function in assignment details popup window</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate cancel button function in assignment details popup window</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='197'>Validate cancel button function in assignment details popup window with values in field</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate cancel button function in assignment details popup window with values in field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_42</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_42</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='140'>Validate admin able to add new assignment missing Assignment Due date</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Assignment Due date</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_46</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_46</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='165'>validate date picker should be correct format</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.validate date picker should be correct format</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag10_EditBatch</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag10_EditBatch</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='66'>Validate row level edit icon</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate row level edit icon</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_48</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_48</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='175'>Validate left arrow in data picker to navigate to next month</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate left arrow in data picker to navigate to next month</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_50</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_50</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='185'>Validate selected date is highlighted in the date picker</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate selected date is highlighted in the date picker</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>21</span>
+</span>
+<p class="name">@tag</p>
+<p class="duration text-sm">21 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag</h4>
+<span status="fail" class='badge log badge-danger'>21 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Check if the fields exist in popup</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the fields exist in popup</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>Check if description is optional field</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if description is optional field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>Check if the program details are added in data table</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the program details are added in data table</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>Check if the program details are added in data table</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the program details are added in data table</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='18'>Check for eror mesrsages for invalid fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for eror mesrsages for invalid fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>Check for eror mesrsages for invalid fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for eror mesrsages for invalid fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='35'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='43'>Validate row level delete icon</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate row level delete icon</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Validate accept alert</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate accept alert</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='51'>Validate reject alert</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate reject alert</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>Validate the delete icon below the header</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate the delete icon below the header</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='58'>Check for single row delete</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for single row delete</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>Check for multi row delete</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for multi row delete</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='66'>Validate row level edit icon</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Validate row level edit icon</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='71'>The updated batch details should appear on the data table</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.The updated batch details should appear on the data table</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='76'>Check if the update throws error with invalid values</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the update throws error with invalid values</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='81'>Check if you get error message when mandatory fields are erased</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if you get error message when mandatory fields are erased</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Check if description field is optional in update</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if description field is optional in update</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_51</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_51</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='191'>Validate cancel button function in assignment details popup window</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate cancel button function in assignment details popup window</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_38</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_38</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='112'>Validate admin able to add new assignment with invalid data in optional fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with invalid data in optional fields</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag2</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag2</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>Check if description is optional field</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if description is optional field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_37</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_37</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='105'>Validate admin able to add new assignment with valid data in all fields</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment with valid data in all fields</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_43</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_43</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='147'>Validate admin able to add new assignment missing Grade by</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment missing Grade by</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_49</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_49</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='180'>Validate current date is highlighted in the date picker</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate current date is highlighted in the date picker</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@tag3</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag3</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>Check if the program details are added in data table</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the program details are added in data table</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>Check if the program details are added in data table</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the program details are added in data table</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_44</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_44</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='154'>Validate admin able to add new assignment passing past date</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate admin able to add new assignment passing past date</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag13</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag13</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='81'>Check if you get error message when mandatory fields are erased</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if you get error message when mandatory fields are erased</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@tag4</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag4</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='18'>Check for eror mesrsages for invalid fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for eror mesrsages for invalid fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='22'>Check for eror mesrsages for invalid fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for eror mesrsages for invalid fields</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@assignment_52</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@assignment_52</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='90' id='197'>Validate cancel button function in assignment details popup window with values in field</a>
+<div class="">
+<span class="badge badge-default">Add new assignment.Validate cancel button function in assignment details popup window with values in field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@tag12</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag12</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='76'>Check if the update throws error with invalid values</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check if the update throws error with invalid values</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">@tag5</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag5</h4>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='35'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:16:55 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>Check for error messages for mandatory fields</a>
+<div class="">
+<span class="badge badge-default">AddDeleteEdit Batch validation.Check for error messages for mandatory fields</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sep 14, 2023 11:16:54 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sep 14, 2023 11:16:56 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>2</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='100%'><b>39</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> steps passed</small></div>
+<div>
+<small data-tooltip='27%'><b>39</b> steps failed,
+<b>104</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"AddDeleteEdit Batch validation":0.472,"Add new assignment":0.266
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@assignment_40</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_47</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag14</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag7</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_36</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag7_DeleteMultipleBatches</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_41</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag9</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag11</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag8</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_35</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_45</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_39</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag6_DeleteBatch</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment</td>
+<td>0</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_42</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_46</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag10_EditBatch</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_48</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_50</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag</td>
+<td>0</td>
+<td>21</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_51</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_38</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_37</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_43</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_49</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag3</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_44</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag13</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag4</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@assignment_52</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag12</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag5</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>user</td>
+<td>Team10</td>
+</tr>
+<tr>
+<td>project</td>
+<td>BDDLearners</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>GoogleChrome</td>
+</tr>
+<tr>
+<td>os</td>
+<td>windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 39,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 39,
+warningGrandChild: 0,
+skipGrandChild: 104,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

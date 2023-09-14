@@ -13,7 +13,7 @@ import utilities.CommonUtils;
 import utilities.ConfigReader;
 import utilities.ExcelReader;
 import utilities.Loggerload;
-
+import utilities.ExcelSheet;
 public class AddEditDelBatch_stepdef {
 	
 	CommonUtils util =new CommonUtils ();
@@ -83,7 +83,7 @@ public class AddEditDelBatch_stepdef {
 	}
 
 	@When("Admin clicks the delete icon")
-	public void admin_clicks_the_delete_icon() {
+	public void admin_clicks_the_delete_icon_ADD() {
 	    bp.clickdeleteIcon();
 	}
 
@@ -118,7 +118,7 @@ public class AddEditDelBatch_stepdef {
 	}
 
 	@Then("The delete icon under the {string} header should be disabled")
-	public void the_delete_icon_under_the_header_should_be_disabled(String string) {
+	public void the_delete_icon_under_the_header_should_be_disabled_ADD(String string) {
 	    bp.checkDeleteButton();
 	    Loggerload.info("Delete button is disabled");
 	}
@@ -135,7 +135,7 @@ public class AddEditDelBatch_stepdef {
 	}
 
 	@Then("The respective row in the data table is deleted")
-	public void the_respective_row_in_the_data_table_is_deleted() {
+	public void the_respective_row_in_the_data_table_is_deleted_ADDBATCH() {
 	bp.selectSingleDeleteIcon();
 	}
 
@@ -159,7 +159,7 @@ public class AddEditDelBatch_stepdef {
 		ExcelReader reader = new ExcelReader();
 
 		
-		List<Map<String, String>> testdata = reader.getData(Excelpath, SheetName);
+		/*List<Map<String, String>> testdata = reader.getData(Excelpath, SheetName);
 		
 		batchName = testdata.get(rowNo).get("batchName");
 		batchDescr = testdata.get(rowNo).get("batchDescr");
@@ -176,7 +176,7 @@ public class AddEditDelBatch_stepdef {
 			bp.SetNoOfClasses(classnos);
 			bp.ClickConfirmation(confirmation);
 			
-		}
+		}*/
 	}
 
 	@Then("The updated batch details should appear on the data table")
@@ -186,7 +186,7 @@ public class AddEditDelBatch_stepdef {
 
 	@When("Update the fields with invalid values {string} and  \"{int}\" and click save")
 	public void update_the_fields_with_invalid_values_and_and_click_save(String SheetName , Integer rowNo) {
-    ExcelReader reader = new ExcelReader();
+   /* ExcelReader reader = new ExcelReader();
     List<Map<String, String>> testdata = reader.getData(Excelpath, SheetName);
 		
 		batchName = testdata.get(rowNo).get("batchName");
@@ -207,8 +207,8 @@ public class AddEditDelBatch_stepdef {
 		}
 		Loggerload.info("User clicks on Save Button");
 		bp.ClickConfirmation(confirmation);
+	}*/
 	}
-
 	@Then("Error message should appear")
 	public void error_message_should_appear() {
 	    Loggerload.info("User get an error message that Entered Values are invalid");
@@ -220,7 +220,7 @@ public class AddEditDelBatch_stepdef {
 
 	@When("Erase data from mandatory field {string} and {int}")
 	public void erase_data_from_mandatory_field_and(String SheetName, Integer rowNo) {
-		ExcelReader reader = new ExcelReader();
+	/*	ExcelReader reader = new ExcelReader();
 	    List<Map<String, String>> testdata = reader.getData(Excelpath, SheetName);
 			
 			batchName = testdata.get(rowNo).get("batchName");
@@ -241,11 +241,11 @@ public class AddEditDelBatch_stepdef {
 			}
 			Loggerload.info("User clicks on Save Button");
 			bp.ClickConfirmation(confirmation);
-		}
-
+		}*/
+	}
 	@When("Erase data from description field {string} and {int}")
 	public void erase_data_from_description_field_and(String SheetName, Integer rowNo) {
-		ExcelReader reader = new ExcelReader();
+		/*ExcelReader reader = new ExcelReader();
 	    List<Map<String, String>> testdata = Excelreader.getData(Excelpath, SheetName);
 			
 			batchName = testdata.get(rowNo).get("batchName");
@@ -266,7 +266,7 @@ public class AddEditDelBatch_stepdef {
 			}
 			Loggerload.info("User clicks on Save Button");
 			bp.ClickConfirmation(confirmation);
-		}
+		}*/
 
 	}
 	

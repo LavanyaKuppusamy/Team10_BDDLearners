@@ -61,14 +61,14 @@ Feature: AddDeleteEdit Batch validation
   
   @tag8
   Scenario: Validate reject alert
-  Given Admin clicks the delete icon
+  Given Admin clicks the delete icon_ADD
   When you click No option
   Then Batch is still listed in data table
   
   @tag7_DeleteMultipleBatches 
   Scenario: Validate the delete icon below the header 
   Given None of the checkboxes in data table are selected
-  Then The delete icon under the "Manage Batch" header should be disabled
+  Then The delete icon under the "Manage Batch" header should be disabled_ADD
   
   @tag9
   Scenario: Check for single row delete
@@ -80,7 +80,7 @@ Feature: AddDeleteEdit Batch validation
   Scenario: Check for multi row delete
   Given Two or more checkboxes/row is selected
   When Click delete icon below "Manage Batch" header
-  Then The respective row in the data table is deleted 
+  Then The respective row in the data table is deleted_ADDBATCH
   
   @tag10_EditBatch
   Scenario: Validate row level edit icon

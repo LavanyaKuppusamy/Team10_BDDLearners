@@ -120,7 +120,7 @@ Feature: Add new assignment
     Scenario: Validate date picker 
      Given Admin is in  assignment details popup window
      When Admin clicks date from date picker 
-     Then selected date should be their in class date text box
+     Then selected date should be their in class date text box ASSIGN
     
     @assignment_46
     Scenario: validate date picker should be correct format
@@ -138,7 +138,7 @@ Feature: Add new assignment
     Scenario: Validate left arrow in data picker to navigate to next month
      Given Admin is in  assignment details popup window
      When Admin clicks left arrow in the date picker near month
-     Then previous month calender should visible  
+     Then previous month calender should visible_ASSIGNMENT
   
     @assignment_49
     Scenario: Validate current date is highlighted in the date picker

@@ -11,7 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import constant.Constant;
-import driver.Driver_Factory;
+import webdriverManager.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +22,8 @@ import utilities.Loggerload;
 
 public class AddAssignment_SD extends Constant {
 
-	WebDriver driver = Driver_Factory.getDriver();
+	
+	WebDriver driver;
 	String URL = driver.getCurrentUrl();
 	AssignmentAddEditPage assignAddEdit = new AssignmentAddEditPage(driver);
 	String[] fields = { "Program Name", "Batch Number", "Assignment Name", "Assignment Description", "Grade By",
@@ -32,7 +33,7 @@ public class AddAssignment_SD extends Constant {
 
 	@Given("Admin logged into LMS portal")
 	public void admin_logged_into_lms_portal() {
-		Driver_Factory.openPage("https://LMSportalapp.herokuapp.com/login");
+		driver.get("https://LMSportalapp.herokuapp.com/login");
 	}
 
 	@When("Admin clicks assignment button on the navigation bar")
@@ -307,8 +308,8 @@ public class AddAssignment_SD extends Constant {
 
 	}
 
-	@Then("selected date should be their in class date text box")
-	public void selected_date_should_be_their_in_class_date_text_box() {
+	@Then("selected date should be their in class date text box_ASSIGN")
+	public void selected_date_should_be_their_in_class_date_text_box_ASSIGN() {
 		String inputDate = assignAddEdit.getDate();
 		// if(inputDate.equals(class_date.getText())) {
 		// Assert.assertTrue(true);
@@ -347,7 +348,7 @@ public class AddAssignment_SD extends Constant {
 	}
 
 	@Then("previous month calender should visible")
-	public void previous_month_calender_should_visible() {
+	public void previous_month_calender_should_visible_ASSIGNMENT() {
 		Loggerload.info("previous month calender should visible");
 	}
 
@@ -397,6 +398,24 @@ public class AddAssignment_SD extends Constant {
 			if(count==actual count as before) {
 				Loggerload.info("new assignment is not created in the data table");
 			}*/
+		}}
+		
+		@Given("A new pop up with Batch details appears")
+		public void a_new_pop_up_with_batch_details_appears() {
+		    // Write code here that turns the phrase above into concrete actions
+		    throw new io.cucumber.java.PendingException();
 		}
+		@Then("The pop up should include the fields Name ,Description as text box, Program Name as drop down, Status as radio button ,Number of classes as text box")
+		public void the_pop_up_should_include_the_fields_name_description_as_text_box_program_name_as_drop_down_status_as_radio_button_number_of_classes_as_text_box() {
+		    // Write code here that turns the phrase above into concrete actions
+		    throw new io.cucumber.java.PendingException();
+		}
+	
+
+	
+	
+	
 	}
-}
+	
+	
+

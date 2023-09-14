@@ -1,6 +1,6 @@
 
 @Batch
-Feature: Validate Batch Page
+Feature: Batch Page
 
 
 @tag1

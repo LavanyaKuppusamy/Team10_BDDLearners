@@ -1,5 +1,10 @@
 package constant;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import utilities.Loggerload;
+import utilities.ExcelReader;
 public class Constant {
 	
 	
@@ -14,5 +19,13 @@ public class Constant {
 	
 	//public DashboardPage dashboard;
 	//public UserMainPage usermainpage;
+	
+	public static ArrayList<String> excelDataValue(String sheetName, String testCase) throws IOException {
+		Loggerload.info("excelDataValue method");
+		ExcelReader ed = new ExcelReader();
+		ArrayList<String> data =  ed.dataDrivenMethod(sheetName, testCase);
+		return data;
+	}
+	
 
 }

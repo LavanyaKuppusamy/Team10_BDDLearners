@@ -1,7 +1,7 @@
 #Author: Hima
 
 @assignment
-Feature: 
+Feature: Assignment module 
 
   Background:
    Given Admin logged into LMS portal 

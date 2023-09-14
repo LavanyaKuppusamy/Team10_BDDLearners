@@ -1,5 +1,5 @@
 @tag
-Feature: Validate Program Page
+Feature: Program Page
   
  
   @tag2

@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @user
-Feature: Delete User
+Feature: Attendence Delete User
   
  Background:
    Given user Logged on the LMS portal 

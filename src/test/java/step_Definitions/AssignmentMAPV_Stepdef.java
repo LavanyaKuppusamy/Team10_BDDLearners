@@ -50,8 +50,8 @@ public class AssignmentMAPV_Stepdef {
 		
 	}
 
-	@Then("Admin should see disabled delete icon below the {string}")
-	public void admin_should_see_disabled_delete_icon_below_the(String string) {
+	@Then("Admin should see disabled delete icon below the_ASSIGNMENT {string}")
+	public void admin_should_see_disabled_delete_icon_below_the_ASSIGNMENT(String string) {
 	    Assignment.verifyDeleteIcon();
 	}
 
@@ -89,8 +89,8 @@ public class AssignmentMAPV_Stepdef {
 	    
 	}
 
-	@Then("Delete Icon in each row of data table only  when entries are available")
-	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available() {
+	@Then("Delete Icon in each row of data table only  when entries are available_ASSIGNMENT")
+	public void delete_icon_in_each_row_of_data_table_only_when_entries_are_available_ASSIGNMENT() {
 		
 		Assignment.VerifyDeleteIcon2();
 	    

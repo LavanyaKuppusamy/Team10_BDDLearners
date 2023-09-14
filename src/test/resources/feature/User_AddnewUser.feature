@@ -1,7 +1,7 @@
 #Author: Hima
 
 @user_Add
-Feature: Add new user
+Feature: UserModule_AddNew
   
   Background:
    Given user Logged on the LMS portal 

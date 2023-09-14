@@ -52,6 +52,11 @@ public class ConfigReader {
 			e.printStackTrace();
 		}	 
 	}
+
+	public static String getexcelfilepath() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

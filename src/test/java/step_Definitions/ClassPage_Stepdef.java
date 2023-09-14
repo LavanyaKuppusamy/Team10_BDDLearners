@@ -7,10 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import webdriverManager.DriverManager;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page_Objects.ClassPage;
+import utilities.ExcelSheet;
 
 
 public class ClassPage_Stepdef {
@@ -412,7 +414,7 @@ private ClassPage cp;
 		
 		 @When("Admin enters all mandatory field values with invalid data and clicks save button {string} {string} {string} {string} {string} {string} {string} and {string}")
 			public void Admin_enters_values_in_all_fields_with_valid_data_and_clicks_save_button(String ClassDescription, String comments, String Notes,String Batchid, String Classno, String Classdate, String Staffid, int RowNumber) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+				ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("invaliddata");
 				cp.class_invalid_data(code);
@@ -427,7 +429,7 @@ private ClassPage cp;
 		 }
 		 @When("Admin enters values in all fields with valid data and clicks save button {string} {string} {string} {string} {string} {string} {string} and {string}")
 			public void Admin_enters_values_in_all_fields_with_valid_data_and_clicks_save_buttons(String ClassDescription, String comments, String Notes,String Batchid, String Classno, String Classdate, String Staffid, int RowNumber) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+			 ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("validdata");
 				cp.AddNewClassdetails_ValidData(code);
@@ -445,7 +447,7 @@ private ClassPage cp;
 		
 		 @When("Admin enters all mandatory field values with invalid data and clicks save button {string} {string} {string} {string} {string} {string} {string} and {string}")
 			public void Admin_enters_values_in_all_fields_with_invalid_data_and_clicks_save_button(String ClassDescription, String comments, String Notes,String Batchid, String Classno, String Classdate, String Staffid, int RowNumber) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+			 ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("invaliddata");
 				cp.class_invalid_data(code);
@@ -462,7 +464,7 @@ private ClassPage cp;
 		
 		 @When("Admin enters data missing value in Batch ID and clicks save button {string} {string} {string} and {string}")
 			public void Admin_enters_values_in_all_fields_with_invalid_data_and_clicks_save_button(String Batchid, String Classdate, String Staffid, int RowNumber) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+			 ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("BatchId");
 				cp.Batchid_empty(Batchid, Classdate, Staffid);
@@ -478,7 +480,7 @@ private ClassPage cp;
 		
 		 @When("Admin enters data missing value in No of Class and clicks save button {string} {string} {string} and {string}")
 			public void Admin_enters_data_missing_value_in_No_of_class_and_clicks_save_button (String Batchid, String Classdate, String Staffid, int RowNumber) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+			 ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("ClassNo");
 				cp.ClassNo_empty(Batchid, Classdate, Staffid);
@@ -493,7 +495,7 @@ private ClassPage cp;
 		 }
 		 @When("Admin enters data missing value in Class Date and clicks save button {string} {string} {string} and {string}")
 			public void Admin_enters_data_missing_value_in_Class_Date_and_clicks_save_button (String Batchid, String Classdate, String Staffid, int RowNumber) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+			 ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("ClassDate");
 				cp.Classdate_empty(Batchid, Classdate, Staffid);
@@ -510,7 +512,7 @@ private ClassPage cp;
 		
 		 @When("Admin enters data missing value in Staff id and clicks save button {string} {string} {string} and {string}")
 			public void Admin_enters_data_missing_value_in_staff_id_and_clicks_save_button(String Batchid, String Classdate, String Staffid, int RowNumber) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+			 ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("Staffid");
 				cp.Classdate_empty(Batchid, Classdate, Staffid);
@@ -526,7 +528,7 @@ private ClassPage cp;
 		
 		 @When("Admin enters passed date in the class date field and clicks save button {string} {string} {string} and {string}")
 			public void Admin_enters_passed_date_in_the_class_date_field_and_clicks_save_button(String Batchid, String Classdate, String Staffid, int RowNumber, WebElement[] passdates) throws InvalidFormatException, IOException {
-				ExcelReader reader=new ExcelReader();
+			 ExcelSheet reader=new ExcelSheet();
 				List<Map<String,String>> testData=reader.getData("/Users/rajanikanthpemmaraju-venkata/eclipse-workspace/lmsproject/Excel/DsAlgo_data (3).xlsx", Staffid);
 				String code=testData.get(RowNumber).get("passeddate");
 				cp.Passed_date(passdates);
