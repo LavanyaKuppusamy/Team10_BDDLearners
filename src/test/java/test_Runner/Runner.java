@@ -15,7 +15,7 @@ package test_Runner;
 					
 			features="src/test/resources/feature",
 			glue="step_Definitions",
-			dryRun=false,
+			dryRun=true,
 			monochrome=true,
 			publish=true
 			

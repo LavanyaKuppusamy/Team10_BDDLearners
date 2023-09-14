@@ -268,8 +268,8 @@ public class Attendance_SD {
 	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Then("selected date should be in  mm\\/dd\\/yyyy format")
-	public void selected_date_should_be_in_mm_dd_yyyy_format() {
+	@Then("selected date should be in  mm\\/dd\\/yyyy formatsv")
+	public void selected_date_should_be_in_mm_dd_yyyy_formatsv() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
@@ -473,9 +473,9 @@ public class Attendance_SD {
 	}
 
 	@When("Admin clicks the delete icon")
-	public void admin_clicks_the_delete_icon() {
+	/*public void admin_clicks_the_delete_icon() {
 		attendancepage.clickDelete();
-	}
+	}*/
 
 	@Then("Alert appears with yes and No option")
 	public void alert_appears_with_yes_and_no_option() {

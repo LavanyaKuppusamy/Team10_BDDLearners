@@ -221,7 +221,7 @@ Feature: Manage Attendance Page verification
   Scenario Outline: validate date picker should be correct format
     Given Admin is in manage attendance page
     When Admin clicks + a new attendance button
-    Then selected date should be in  mm/dd/yyyy format
+    Then selected date should be in  mm/dd/yyyy formatsv
 
   @tag38
   Scenario Outline: Validate right arrow in data picker to navigate to next month

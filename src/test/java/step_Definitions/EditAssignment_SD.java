@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import org.openqa.selenium.WebDriver;
 
 import constant.Constant;
-import driver.Driver_Factory;
+import webdriverManager.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,8 +14,9 @@ import page_Objects.AssignmentAddEditPage;
 import utilities.Loggerload;
 
 public class EditAssignment_SD extends Constant {
+	
 
-	WebDriver driver = Driver_Factory.getDriver();
+	WebDriver driver;
 	String URL = driver.getCurrentUrl();
 	AssignmentAddEditPage assignAddEdit = new AssignmentAddEditPage(driver);
 

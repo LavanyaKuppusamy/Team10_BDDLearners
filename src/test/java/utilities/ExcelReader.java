@@ -89,7 +89,7 @@ public class ExcelReader {
 		}
 	}
 
-	public static Map<String, String> getData(String dataKey, String sheetName) throws Exception {
+	public static Map<String, String> getData1(String dataKey, String sheetName) throws Exception {
 		Map<String, String> dataMap = new HashMap<String, String>();
 			setExcelFile(sheetName);
 			int dataRow = getDataRow(dataKey.trim(), 0);
@@ -115,12 +115,22 @@ public class ExcelReader {
 	
 	public static void main(String []args) throws Exception {
 		Map<String,String> dataMap = new HashMap<String, String>();
-		dataMap = getData("updateBooking21","sheet1");
+		dataMap = getData1("updateBooking21","sheet1");
 		for(Map.Entry<String, String> data: dataMap.entrySet()) {
 			//LoggerLoad.logInfo(data.getKey()+ " ==> " + data.getValue());
 		}
 	}
 
+	public static Map<String, String> getData(String datakey, String sheetName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ArrayList<String> dataDrivenMethod(String sheetName, String testCase) {
+		// TODO Auto-generated method stub
+		return null;
+	}}
+
+
 
 	
-}

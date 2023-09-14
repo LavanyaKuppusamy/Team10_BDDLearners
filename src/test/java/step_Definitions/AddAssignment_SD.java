@@ -11,7 +11,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import constant.Constant;
-import driver.Driver_Factory;
+import webdriverManager.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +22,8 @@ import utilities.Loggerload;
 
 public class AddAssignment_SD extends Constant {
 
-	WebDriver driver = Driver_Factory.getDriver();
+	
+	WebDriver driver;
 	String URL = driver.getCurrentUrl();
 	AssignmentAddEditPage assignAddEdit = new AssignmentAddEditPage(driver);
 	String[] fields = { "Program Name", "Batch Number", "Assignment Name", "Assignment Description", "Grade By",
@@ -32,7 +33,7 @@ public class AddAssignment_SD extends Constant {
 
 	@Given("Admin logged into LMS portal")
 	public void admin_logged_into_lms_portal() {
-		Driver_Factory.openPage("https://LMSportalapp.herokuapp.com/login");
+		driver.get("https://LMSportalapp.herokuapp.com/login");
 	}
 
 	@When("Admin clicks assignment button on the navigation bar")

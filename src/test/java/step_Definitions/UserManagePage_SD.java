@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import constant.Constant;
-import driver.Driver_Factory;
+import webdriverManager.DriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,7 +19,7 @@ import utilities.Loggerload;
 
 public class UserManagePage_SD extends Constant {
 
-	WebDriver driver = Driver_Factory.getDriver();
+	WebDriver driver ;
 	// DashboardPage dashboard = new DashboardPage(driver);
 	UserManagePage usermainpage = new UserManagePage(driver);
 	UserAddedit userAddedit =new UserAddedit(driver);
@@ -31,12 +31,12 @@ public class UserManagePage_SD extends Constant {
 	@Given("user Logged on the LMS portal")
 	public void user_logged_on_the_lms_portal() {
 		// LoginPage = new LoginPage(driver);
-		Driver_Factory.openPage("https://LMSportalapp.herokuapp.com/login");
+		driver.get("https://LMSportalapp.herokuapp.com/login");
 	}
 
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_login() {
-		Driver_Factory.openPage("https://LMSportalapp.herokuapp.com/dashboard");
+		driver.get("https://LMSportalapp.herokuapp.com/dashboard");
 		Loggerload.info("Admin is on dashboard page");
 	}
 
