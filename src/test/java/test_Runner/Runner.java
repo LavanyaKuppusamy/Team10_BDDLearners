@@ -14,7 +14,11 @@ package test_Runner;
 					
 					
 			features="src/test/resources/feature",
+<<<<<<< HEAD
 			glue="HomePage_stepdef",
+=======
+			glue="step_Definitions",
+>>>>>>> 0231b05d1cb4762228f957018f1bc4f3d2e8f1ae
 			dryRun=true,
 			monochrome=true,
 			publish=true
