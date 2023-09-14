@@ -307,6 +307,39 @@ public ProgramPage(WebDriver wdriver) {
 			return iconMultipleDelete.isEnabled();
 		}
 		
+		@FindBy(id = "lms-search-input")
+		WebElement searchField;
+		
+		public boolean checkSearchField() {
+			return searchField.isDisplayed();
+		}
+		
+		@FindBy(xpath = "//tbody/tr/td[6]")
+		List<WebElement> editIcon;
+		
+		@FindBy(xpath = "//tbody/tr/td[7]")
+		List<WebElement> deleteIcon;
+		
+		
+		public boolean checkEditIcon() {
+			boolean flag = editIcon.stream().anyMatch(c -> c.isEnabled());
+			return flag;
+		}
+
+		public boolean checkDeleteIcon() {
+			boolean flag = deleteIcon.stream().anyMatch(c -> c.isEnabled());
+			return flag;
+		}
+			
+			@FindBy(xpath = "//tbody/tr/th")
+			List<WebElement> tableHeaders;
+			
+			public List<WebElement> getTableHeaders() {
+				return tableHeaders;
+
+			}
+
+		
 		
 	
 }
