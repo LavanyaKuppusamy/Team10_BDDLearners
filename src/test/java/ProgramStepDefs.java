@@ -1,5 +1,6 @@
 package step_Definitions;
 
+
 import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -41,7 +42,7 @@ public class ProgramStepDefs {
 	@Then("Admin gets following pop up message {string}")
 	public void admin_gets_following_pop_up_message(String Message) throws InterruptedException {
 		
-		
+		Thread.sleep(3000);
 		boolean output = driver.getPageSource().contains(Message);
 		Assert.assertEquals(output,true);		
 		Thread.sleep(2000);
