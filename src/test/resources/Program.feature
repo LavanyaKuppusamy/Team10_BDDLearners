@@ -52,7 +52,9 @@ Feature: Validate Program Page
       | Confirm | Messsage |
       |  Yes    | Sucessfully Deleted |
       |  No     | NA |
-       
+     
+      
+      
       
     Scenario Outline: Delete multiple Program
     Given Admin is on Manage Program Page 
