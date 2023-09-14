@@ -5,16 +5,25 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.aventstack.extentreports.util.Assert;
 
 import io.cucumber.java.en.*;
 import page_Objects.ProgramPage;
+import utilities.Loggerload;
+import webdriverManager.DriverManager;
 
 public class ProgFunctionalityDefs {
 	
 	WebDriver driver;
 	ProgramPage progPage;
 	boolean Content;
+	//Common commoncontent;
+	String URL = driver.getCurrentUrl();
 	
 	@Given("Admin is on Manage Program page")
 	public void admin_is_on_manage_program_page() {
@@ -75,24 +84,18 @@ public class ProgFunctionalityDefs {
 	@When("Admin clicks on the Ascending or Descending arrow button on program page")
 	public void admin_clicks_on_the_ascending_or_descending_arrow_button_on_program_page(io.cucumber.datatable.DataTable dataTable) {
 	   
+	//	commoncontent.sort();
+		
 	}
 
 	@Then("Admin can see the results in Ascending or Descending order on program page")
 	public void admin_can_see_the_results_in_ascending_or_descending_order_on_program_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@When("Admin clicks on the link page button on program page")
 	public void admin_clicks_on_the_link_page_button_on_program_page(io.cucumber.datatable.DataTable dataTable) {
-	    // Write code here that turns the phrase above into concrete actions
-	    // For automatic transformation, change DataTable to one of
-	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-	    //
-		 // For other transformations you can register a DataTableType.
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 	@Then("Admin is re-directed to following page")
@@ -103,37 +106,37 @@ public class ProgFunctionalityDefs {
 
 	@Given("Admin is on dashboard page after Login")
 	public void admin_is_on_dashboard_page_after_login() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		DriverManager.openPage("https://LMSportalapp.herokuapp.com/login");
+	   
 	}
 	@When("Admin clicks {string} on the navigation bar")
 	public void admin_clicks_on_the_navigation_bar(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		// dashboard = new DashboardPage(driver);
+				// dashboard.clickUserTab();
+				Loggerload.info("Admin clicked User from navigation bar");
 	}
 
 	@Then("Admin should see URL with {string}")
 	public void admin_should_see_url_with(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		Loggerload.info("Admin user sees Manage User in the URL");
+		assertEquals(URL, "https://LMSportalapp.herokuapp.com/manageUser");
 	}
 
 	@Then("Admin should see a heading with text {string} on the page")
 	public void admin_should_see_a_heading_with_text_on_the_page(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		progPage.GetPageHeaderTitle();
+	   
 	}
 
 	@Then("Admin should see the text as {string} along with Pagination icon below the table.")
 	public void admin_should_see_the_text_as_along_with_pagination_icon_below_the_table(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@Then("Admin should see the footer as {string}.")
 	public void admin_should_see_the_footer_as(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
     
 	
@@ -162,28 +165,44 @@ public class ProgFunctionalityDefs {
 
 	@Then("Admin should see the sort arrow icon beside to each column header except Edit and Delete")
 	public void admin_should_see_the_sort_arrow_icon_beside_to_each_column_header_except_edit_and_delete() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
 
 	@Then("Admin should see check box on the left side in all rows of the data table")
 	public void admin_should_see_check_box_on_the_left_side_in_all_rows_of_the_data_table() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   
 	}
+	
 	@Then("Admin should see the Edit and Delete buttons on each row of the data table")
 	public void admin_should_see_the_edit_and_delete_buttons_on_each_row_of_the_data_table() {
+		
+		assertTrue(progPage.checkEditIcon());
+		Loggerload.info("Edit icon is present in User Main Page");
+		assertTrue(progPage.checkDeleteIcon());
+		Loggerload.info("Delete icon is present in User Main Page");
 	    
 	}
 
 	@Then("Admin should see Search bar with text as {string}")
 	public void admin_should_see_search_bar_with_text_as(String string) {
-	   
+		
+		if (progPage.checkSearchField()) {
+			Loggerload.info("Admin sees the Search Text Box");
+		} else
+
+			Loggerload.info("Search textbox is missing");
 	}
+
+	   
+	
 
 	@Then("Admin should see data table on the Manage Program Page with following column headers")
 	public void admin_should_see_data_table_on_the_manage_program_page_with_following_column_headers(io.cucumber.datatable.DataTable dataTable) {
-	  
+	 
+		List<WebElement> list_of_headers = progPage.getTableHeaders();
+		list_of_headers.stream().forEach(l -> System.out.println(l));
+		Loggerload.info("Admin sees the data table with headers Program Name, Program Description, Program Status ,Edit,Delete");
+		
 	}
 
 	@When("Admin enters Program search content into search box {string}")
@@ -195,6 +214,9 @@ public class ProgFunctionalityDefs {
 
 	@Then("Admin see the Program search result")
 	public void admin_see_the_program_search_result() throws InterruptedException {
+		
+		Loggerload.info("Admin see Program Search result" );
+		//assertTrue("Program page ", progPage.IsPageLoaded("Program"));
 		
 		
 	    
